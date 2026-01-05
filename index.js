@@ -1001,7 +1001,7 @@ function updateStatus() {
     : isCycleRunning
       ? `${loadingSpinner[spinnerIndex]} {yellow-fg}Waiting for next cycle{/yellow-fg}`
       : "{green-fg}Idle{/green-fg}";
-  const statusText = `Status: ${status} | Active Account: ${getShortAddress(walletInfo.address)} | Total Accounts: ${addresses.length} | Swap Rounds: ${dailyActivityConfig.swapRepetitions}x | XYLO TESTNET AUTO BOT - PRO VERSION`;
+  const statusText = `Status: ${status} | Active Account: ${getShortAddress(walletInfo.address)} | Total Accounts: ${addresses.length} | Swap Rounds: ${dailyActivityConfig.swapRepetitions}x | XYLO TESTNET AUTO BOT `;
   try {
     statusBox.setContent(statusText);
   } catch (error) {
@@ -1443,5 +1443,6 @@ setTimeout(() => {
   adjustLayout();
   screen.on("resize", adjustLayout);
 }, 100);
+
 
 initialize();
